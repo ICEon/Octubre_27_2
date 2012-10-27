@@ -34,16 +34,13 @@
                 // Orientation callback event
                 $('#jqt').bind('turn', function(e, data){
                     $('#orient').html('Orientation: ' + data.orientation);
-  
+	$('#Bot').text(device.name);  
                 });
 
-$(document).ready(function(e) {
 
-    document.addEventListener('deviceready', function (){
-	$('#Bot').text(device.name);
 
-	},false);
-});
+
+
                 
             });
         </script>
