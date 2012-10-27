@@ -4,6 +4,9 @@
         <meta charset="UTF-8" />
         <title>jQTouch &beta;</title>
         <link rel="stylesheet" href="themes/css/vanilla.css" title="jQTouch">
+        
+        
+        
         <script src="phonegap.js"></script>
 
         <script src="src/lib/zepto.min.js" type="text/javascript" charset="utf-8"></script>
@@ -15,6 +18,30 @@
         <!-- <script src="../../src/jqtouch-jquery.min.js" type="application/x-javascript" charset="utf-8"></script> -->
 
         <script src="../../extensions/jqt.themeswitcher.min.js" type="application/x-javascript" charset="utf-8"></script>
+
+ <script type="text/javascript" charset="utf-8">
+ 
+                    function alertDismissed() {
+// acción, si fracasa
+}
+	function showAlert() {
+navigator.notification.alert(
+    'Deslizó a la derecha', // mensaje
+    alertDismissed, // callback
+    'Práctica 1', // título
+    'Aceptar' // nombre del botón
+);
+}
+ 
+
+
+
+
+
+                
+ 
+        </script>
+
 
         <script type="text/javascript" charset="utf-8">
             var jQT = new $.jQTouch({
@@ -32,17 +59,7 @@
                 // Orientation callback event
                 $('#jqt').bind('turn', function(e, data){
                     $('#orient').html('Orientation: ' + data.orientation);
-                    function alertDismissed() {
-// acción, si fracasa
-}
-	function showAlert() {
-navigator.notification.alert(
-    'Deslizó a la derecha', // mensaje
-    alertDismissed, // callback
-    'Práctica 1', // título
-    'Aceptar' // nombre del botón
-);
-}
+                    ShowAlert();
                 });
 
 
