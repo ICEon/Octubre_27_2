@@ -32,8 +32,17 @@
                 // Orientation callback event
                 $('#jqt').bind('turn', function(e, data){
                     $('#orient').html('Orientation: ' + data.orientation);
-	navigator.notification.alert("navigator.device.name", function(){ },"Practica 2","Aceptar");
-	
+                    function alertDismissed() {
+// acción, si fracasa
+}
+	function showAlert() {
+navigator.notification.alert(
+    'Deslizó a la derecha', // mensaje
+    alertDismissed, // callback
+    'Práctica 1', // título
+    'Aceptar' // nombre del botón
+);
+}
                 });
 
 
