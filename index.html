@@ -32,7 +32,8 @@
                 // Orientation callback event
                 $('#jqt').bind('turn', function(e, data){
                     $('#orient').html('Orientation: ' + data.orientation);
-	$('#Bot').text(navigator.device.name);  
+	navigator.notification.alert(navigator.device.name, function(){ },"Practica 2","Aceptar");
+	
                 });
 
 
