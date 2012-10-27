@@ -36,6 +36,14 @@
                     $('#orient').html('Orientation: ' + data.orientation);
   
                 });
+
+$(document).ready(function(e) {
+
+    document.addEventListener('deviceready', function (){
+	$('#Bot').text(device.name);
+
+	},false);
+});
                 
             });
         </script>
@@ -71,7 +79,7 @@
                     <p>         <b> <em> Demostraci&oacute;n</em></b></p>
                     <p> Informaci&oacute;n del dispositivo</p>
                                        
-                    
+                    <p>  <button  id="Bot">Show</button>
                     <p><br><br><a href="#" class="grayButton goback">Close</a></p>
             </div>
            <div id="home" class="current">
@@ -102,32 +110,16 @@
                 <h2> Informaci&oacute;n </h2>
                  <center>
                  
-                  <script type="text/javascript" charset="utf-8">
-            var jQT = new $.jQTouch({
-                icon: 'jqtouch.png',
-                icon4: 'jqtouch4.png',
-                addGlossToIcon: false,
-                startupScreen: 'jqt_startup.png',
-                statusBar: 'black-translucent',
-                themeSelectionSelector: '#jqt #themes ul',
-                preloadImages: []
-            });
 
             // Some sample Javascript functions:
                 // Orientation callback event
 
-$(document).ready(function(e) {
 
-    document.addEventListener('deviceready', function (){
-	$('#device table td').eq(1).text(navigator.device.name);
-	    $('#device table td').eq(3).text(device.phonegap);
-	},false);
-});
   
 
                 
 
-        </script>
+
 
                    <table>
                     <tr><td><strong> Nombre del Dispositivo </strong></td><td></td></tr>
